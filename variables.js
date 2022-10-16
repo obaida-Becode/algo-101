@@ -5,20 +5,23 @@
    number1 mod number2 = result; */
    
 const prompt=require("prompt-sync")({sigint:true});
+function sum(){
 var nb1 =parseInt(prompt(" insert the first number"  )) ;
 var nb2 = parseInt(prompt( "put the second number" ));
 var sum = nb1 +nb2;
  console.log(sum);
  console.log(nb1/nb2);
  console.log(nb1 % nb2);
+}
+console.log(sum());
 
  /* sentence1 =  "Welcome in ";
     sentence2 = "JavaScript world"; 
     sentence1 + sentence2 = "Welcome in JavaScript World" */
-
- let s1 = "Welcome in " ;
- let s2 = "JavaScript";
- console.log(s1+s2);
+ function welcome(){
+ console.log("Welcome in JavaScript");
+ }
+ console.log(welcome());
 
  /* The price one pice in 12$ without VAT;
     The price one pice with VAT = price + 21%;
@@ -44,10 +47,11 @@ console.log("total price =" + parseFloat(price*nbpice +(VAT*nbpice)));
    if radius = 3  ;
    surface the circle =  3.14 * 3*3;
    surface the circle =  28.26 ; */
-
-var radius = prompt(Number + " insert number the radius ?");
-   var curface = Math.PI *3*3 ;
-   console.log(curface); 
+function curface(radius){
+   return Math.PI*Math.pow(2,radius);
+}
+radius = prompt(Number + " insert number the radius ?");
+   console.log(curface(radius)); 
 
 /*
 conversion of time to seconds; 
